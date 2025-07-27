@@ -1,0 +1,187 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 40px auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+h1, h2 {
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.input-group label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+input[type="number"],
+input[type="range"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 30px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  border-radius: 30px;
+  border: none;
+  background-color: #ff7e5f;
+  color: white;
+  font-size: 1.2em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+  background-color: #feb47b;
+  transform: translateY(-2px);
+}
+
+.results {
+  margin-top: 20px;
+}
+
+.result-box {
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #f1f1f1;
+  border-radius: 30px;
+  font-size: 1.1em;
+}
+
+#chart-container {
+  margin-top: 20px;
+  height: 250px;
+}
+
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {
+  display: none;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #ff7e5f;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Amortization Table */
+.amortization-table-container {
+  margin-top: 30px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+
+th, td {
+  padding: 10px;
+  text-align: right;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #f7f7f7;
+  font-weight: 600;
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: #222;
+  color: #f4f4f4;
+}
+
+.dark-mode .container {
+  background-color: #333;
+}
+
+.dark-mode input,
+.dark-mode button {
+  background-color: #555;
+  color: #f4f4f4;
+  border: 1px solid #666;
+}
+
+.dark-mode button:hover {
+  background-color: #feb47b;
+}
+
+.dark-mode table {
+  background-color: #444;
+}
+
+.dark-mode th {
+  background-color: #333;
+} 
