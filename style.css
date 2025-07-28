@@ -185,3 +185,10 @@ th {
 .dark-mode th {
   background-color: #333;
 } 
+.dark-mode .result-box {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  color: #f4f4f4;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
