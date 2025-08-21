@@ -2,7 +2,9 @@ body {
   font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  background: linear-gradient(120deg, #6a82fb, #fc5c7d, #43cea2, #185a9d);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   color: #333;
   min-height: 100vh;
   display: flex;
@@ -12,14 +14,22 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
 .container {
   width: 100%;
   max-width: 500px;
-  background: #fff;
-  padding: 20px;
-  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px 24px;
+  border-radius: 24px;
   margin: 40px auto;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.18);
   text-align: center;
 }
 
@@ -47,6 +57,15 @@ input[type="range"] {
   font-size: 1em;
   background-color: #f9f9f9;
   box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input[type="number"]:focus,
+input[type="range"]:focus {
+  border: 1.5px solid #ff7e5f;
+  outline: none;
+  box-shadow: 0 0 0 2px #ff7e5f33;
 }
 
 button {
@@ -54,17 +73,19 @@ button {
   padding: 15px;
   border-radius: 30px;
   border: none;
-  background-color: #ff7e5f;
+  background: linear-gradient(90deg, #ff7e5f 0%, #feb47b 100%);
   color: white;
   font-size: 1.2em;
   cursor: pointer;
   margin-top: 10px;
-  transition: background 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 16px rgba(255,126,95,0.15);
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
 }
 
 button:hover {
-  background-color: #feb47b;
-  transform: translateY(-2px);
+  background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+  transform: translateY(-2px) scale(1.03);
+  box-shadow: 0 8px 24px rgba(67,206,162,0.18);
 }
 
 .results {
@@ -72,11 +93,14 @@ button:hover {
 }
 
 .result-box {
-  padding: 12px;
-  margin: 10px 0;
-  background-color: #f1f1f1;
+  padding: 16px;
+  margin: 12px 0;
+  background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
   border-radius: 30px;
   font-size: 1.1em;
+  box-shadow: 0 2px 8px rgba(255,126,95,0.08);
+  color: #333;
+  font-weight: 500;
 }
 
 #chart-container {
@@ -159,12 +183,16 @@ th {
 
 /* Dark Mode */
 .dark-mode {
-  background-color: #222;
+  background: linear-gradient(120deg, #232526, #414345, #185a9d, #43cea2);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
   color: #f4f4f4;
 }
 
 .dark-mode .container {
-  background-color: #333;
+  background: rgba(34, 34, 34, 0.85);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .dark-mode input,
@@ -185,10 +213,13 @@ th {
 .dark-mode th {
   background-color: #333;
 } 
+
 .dark-mode .result-box {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(6px);
-  border-radius: 20px;
+  background: linear-gradient(90deg, #232526 0%, #414345 100%);
   color: #f4f4f4;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255,255,255,0.10);
 }
+
+
+
+
